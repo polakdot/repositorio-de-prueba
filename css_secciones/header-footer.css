@@ -1,0 +1,181 @@
+/* HEADER */
+
+.logoTitulo {
+    color: white; /* color de logo */
+    font-size: 4.5rem; /* tamaño de logo */
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 20px;
+    padding-bottom: 10px;
+}
+
+nav {
+    margin-right: 30px; /* cambia el márgen */
+}
+
+/* HEADER & FOOTER */
+
+ul {
+    list-style: none; /* quita los puntitos de las ul */
+    font-size: 2.1rem; /* tamaño de letra de las secciones */
+}
+
+li {
+    color: white;
+    display: inline-block;
+    width: 16,6%;
+    position: relative;
+    margin-right: 10px; /* cambia el márgen */
+    margin-left: 10px;
+}
+
+a {
+    color: white;
+    text-decoration: none; /* quita el subrayado de los hipervínculos */
+    display: block;
+}
+
+ul ul {
+    background-color: #f79605;
+    width: 100%;
+    position: absolute;
+    display: none;
+}
+
+ul ul li {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+ul li:hover ul {
+    display:block;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #f79605;
+    height: 80px;
+}
+
+.redes-ig {
+    width: 30px; /* ancho íconos redes */
+    margin-left: 10px; /* margin */
+    margin-right: 5px;
+}
+
+.redes-fb {
+    width: 30px; /* ancho íconos redes */
+    margin-right: 10px; /* margin */
+    margin-left: 5px;
+    padding-right: 25px; /* padding */
+    padding-left: 5px;
+}
+
+/* GRIDS HEADER*/
+
+.grid-header {
+    display: grid;
+    background-color: #f79605;
+    grid-template-areas: 
+        "logo navbar";
+    grid-template-rows: 1fr;
+    grid-column-gap: 20px;
+}
+
+#logo {
+    grid-area: logo;
+    justify-self: start;
+    align-self: center;
+}
+
+#navbar {
+    grid-area: navbar;
+    justify-self: end;
+    align-self: center;
+}
+
+/* GRIDS FOOTER */
+
+.grid-footer {
+    display: grid;
+    grid-template-areas: 
+        "ul-footer redes-footer";
+    grid-template-rows: 1fr;
+    grid-column-gap: 20px;
+}
+
+#ul-footer {
+    grid-area: ul-footer;
+    align-self: center;
+    justify-self: end;
+}
+
+#redes-footer {
+    grid-area: redes-footer;
+    align-self: center;
+    justify-self: end;
+}
+
+/* MEDIA QUERIES */
+
+@media all and (max-width: 1315px) {
+    .grid-header {
+        grid-template-areas: 
+            "logo"
+            "navbar";
+            grid-template-columns: auto;
+        }
+
+    #logo {
+        justify-self: center;
+    }
+    
+    #navbar {
+        justify-self: center;
+    }
+
+    .grid-footer {
+        grid-template-areas: 
+            "ul-footer" 
+            "redes-footer";
+            grid-template-columns: auto;
+        }
+    
+    #ul-footer {
+        justify-self: center;
+    }
+    
+    #redes-footer {
+        justify-self: center;
+    }
+}
+
+@media all and (max-width: 549px) {
+    #logo {
+        text-align: center;
+    }
+
+    #ul-footer {
+        display: none;
+    }
+
+    .grid-footer {
+        grid-template-areas: 
+            "redes-footer";
+            grid-template-columns: auto;
+            grid-template-rows: auto;
+    }
+
+    .redes-ig {
+        margin-left: 0px; /* margin */
+    }
+        
+    .redes-fb {
+        margin-right: 0px; /* margin */
+        margin-left: 5px;
+        padding-right: 0px; /* padding */
+        padding-left: 0px;   
+    }
+}

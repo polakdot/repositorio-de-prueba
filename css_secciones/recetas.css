@@ -1,0 +1,260 @@
+/* normalización desde css*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%; /* conversión de 1rem a 10px */
+    font-family: 'Work Sans', sans-serif; /* fuente del documento html */
+}
+
+.inline {
+    display: inline; /* elemento en línea */
+}
+
+.block {
+    display: block; /* elemento en bloque */
+}
+
+.inline-block {
+    display: inline-block; /* elemento inline-block */
+}
+
+.titulo {
+    color: #f79605;
+    font-size: 5rem;
+}
+
+.descripcion {
+    font-size: 2.5rem;
+}
+
+.subtitulo {
+    color: #f79605;
+    font-size: 4rem;
+}
+
+h4 {
+    font-size: 2rem;
+    border-bottom-color: #f79605;
+    border-bottom-width: 1px;
+    border-bottom-style: groove;   
+}
+
+/* GRIDS MAIN */
+
+.grid-main {
+    display: grid;
+    grid-template-areas: 
+        "titulo titulo titulo titulo"
+        "descripcion descripcion descripcion descripcion"
+        "subt-1 subt-1 subt-1 subt-1"
+        "receta-1 receta-1 receta-2 receta-2"
+        "nombre-receta-1 nombre-receta-1 nombre-receta-2 nombre-receta-2"
+        "receta-3 receta-3 receta-3 receta-3"
+        "nombre-receta-3 nombre-receta-3 nombre-receta-3 nombre-receta-3"
+        "subt-2 subt-2 subt-2 subt-2"
+        "receta-4 receta-4 receta-5 receta-5"
+        "nombre-receta-4 nombre-receta-4 nombre-receta-5 nombre-receta-5"
+        "receta-6 receta-6 receta-6 receta-6"
+        "nombre-receta-6 nombre-receta-6 nombre-receta-6 nombre-receta-6";
+    grid-template-rows: auto auto auto 1fr auto auto auto auto 1fr auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-row-gap: 10px;
+}
+
+#titulo {
+    grid-area: titulo;
+    justify-self: center;
+    margin-top: 50px;
+}
+
+#descripcion {
+    grid-area: descripcion;
+    justify-self: center;
+    text-align: center;
+}
+
+#subt-1 {
+    grid-area: subt-1;
+    justify-self: start;
+    text-align: center;
+    margin-left: 15px;
+}
+
+#receta-1 {
+    grid-area: receta-1;
+    justify-self: start;
+    margin-left: 15px;
+}
+
+#receta-2 {
+    grid-area: receta-2;
+    justify-self: end;
+    margin-right: 15px;
+}
+
+#receta-3 {
+    grid-area: receta-3;
+    justify-self: start;
+    margin-left: 15px;
+}
+
+#nombre-receta-1 {
+    grid-area: nombre-receta-1;
+    justify-self: start;
+    margin-left: 15px;
+    margin-bottom: 20px;
+}
+
+#nombre-receta-2 {
+    grid-area: nombre-receta-2;
+    justify-self: end;
+    margin-right: 15px;
+    margin-bottom: 20px;
+}
+
+#nombre-receta-3 {
+    grid-area: nombre-receta-3;
+    justify-self: start;
+    margin-left: 15px;
+    margin-bottom: 20px;
+}
+
+#subt-2 {
+    grid-area: subt-2;
+    justify-self: start;
+    text-align: center;
+    margin-left: 15px;
+}
+
+#receta-4 {
+    grid-area: receta-4;
+    justify-self: start;
+    margin-left: 15px;
+}
+
+#receta-5 {
+    grid-area: receta-5;
+    justify-self: end;
+    margin-right: 15px;
+}
+
+#receta-6 {
+    grid-area: receta-6;
+    justify-self: start;
+    margin-left: 15px;
+}
+
+#nombre-receta-4 {
+    grid-area: nombre-receta-4;
+    justify-self: start;
+    margin-left: 15px;
+    margin-bottom: 20px;
+}
+
+#nombre-receta-5 {
+    grid-area: nombre-receta-5;
+    justify-self: end;
+    margin-right: 15px;
+    margin-bottom: 20px;
+}
+
+#nombre-receta-6 {
+    grid-area: nombre-receta-6;
+    justify-self: start;
+    margin-left: 15px;
+    margin-bottom: 20px;
+}
+
+/* MEDIA QUERIES */
+
+@media all and (max-width: 1200px) {
+    .grid-main {
+        grid-template-areas: 
+        "titulo"
+        "descripcion"
+        "subt-1"
+        "receta-1"
+        "nombre-receta-1"
+        "receta-2" 
+        "nombre-receta-2"
+        "receta-3"
+        "nombre-receta-3"
+        "subt-2"
+        "receta-4"
+        "nombre-receta-4"
+        "receta-5"
+        "nombre-receta-5"
+        "receta-6"
+        "nombre-receta-6";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr
+    }
+    
+    #subt-1 {
+        justify-self: center;
+        margin-left: 0px;
+    }
+    
+    #receta-1 {
+        justify-self: center;
+        margin-left: 0px;
+    }
+    
+    #receta-2 {
+        justify-self: center;
+        margin-right: 0px;
+    }
+    
+    #receta-3 {
+        justify-self: center;
+        margin-left: 0px;
+    }
+    
+    #nombre-receta-1 {
+        display: none;
+    }
+    
+    #nombre-receta-2 {
+        display: none;
+    }
+    
+    #nombre-receta-3 {
+        display: none;
+    }
+    
+    #subt-2 {
+        justify-self: center;
+        text-align: center;
+        margin-left: 0px;
+    }
+    
+    #receta-4 {
+        justify-self: center;
+        margin-left: 0px;
+    }
+    
+    #receta-5 {
+        justify-self: center;
+        margin-right: 0px;
+    }
+    
+    #receta-6 {
+        justify-self: center;
+        margin-left: 0px;
+    }
+    
+    #nombre-receta-4 {
+        display: none;
+    }
+    
+    #nombre-receta-5 {
+        display: none;
+    }
+    
+    #nombre-receta-6 {
+        display: none;
+    }
+}
