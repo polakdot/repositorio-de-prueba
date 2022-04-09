@@ -142,3 +142,13 @@ h4 {
         display: none;
     }
 }
+
+/* GRADIENTES, TRANSFORMACIONES Y ANIMACIONES */
+
+.imgChica {
+    transition: width 0,7s;
+}
+
+.imgChica:hover {
+    width: 320px;
+}
